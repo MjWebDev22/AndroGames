@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.item-1{ grid-area: header;}
+.item-2{ grid-area: intro;}
+.item-3{ grid-area: body;}
+.item-4{ grid-area: footer;}
+.item-5{ grid-area: txt;}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'intro'
+    'txt'
+    'body'
+    'footer';
+}
+
+.item{
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.item-1{
+    text-align: left;
+    background-color: darkcyan;
+    display: inline;
+    text-align: right;
+    user-select: none;
+}
+
+.item-1 h1{
+    font-size: 20px;
+    color: white;
+    float: left;
+}
+
+.item-1 span{
+    color: orange;
+}
+
+.item-1 i{
+    font-size: 20px;
+    color: white;
+    margin: 0 5px;
+}
+
+.item-2{
+    background: url(images/bg-image.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    padding-top: 200px;
+    color: white;
+}
+
+.item-2 span{
+    color: orange;
+}
+
+.item-2 p{
+    font-size: 16px;
+}
+
+.text-container{
+    position: absolute;
+    left: 40%;
+    height: 45px;
+    overflow: hidden;
+}
+
+.line{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.line:first-child{
+    animation: move 3s infinite;
+}
+
+@keyframes move {
+    0%{
+        margin-top: 0px;
+    }
+    50%{
+        margin-top: -60px;
+    }
+    100%{
+        margin-top: 0px;
+    }
+}
+
+.item-3{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item-3 img{
+    width: 60px;
+}
+
+.item-3 p{
+    font-size: 16px;
+}
+
+.game-app{
+    padding: 10px;
+    background-color: darkcyan;
+    border-radius: 10px;
+}
+
+.game-app h6{
+    color: white;
+}
+
+.game-app img{
+    border-radius: 100%;
+}
+
+.game-app a{
+    font-size: 12px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    transition: .3s;
+}
+
+.game-app a:hover{
+    background-color: orange;
+    color: white;
+}
+
+.item-4{
+    font-size: 13px;
+    background-color: lightskyblue;
+    padding: 20px;
+    font-weight: 500;
+}
+
+.item-5{
+    border-bottom: 1px solid gray;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 600px){
+    .item-2 h1{
+        font-size: 40px;
+    }
+
+    .text-container{
+        left: 14%;
+    }
+}
